@@ -1,0 +1,145 @@
+body {
+     background: #202020; font-family: Georgia, 'Times New Roman', Times, serif;
+     padding: 0 !important;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 120px;     
+           
+}
+
+.container .wrap{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+
+.box{
+    position: relative;
+    width: 400px;
+    height: 420px;
+    background-color: #141922;
+    transition: 0.3s;
+    overflow: hidden;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.box-dashboard-perfil{
+    position: relative;
+    width: 400px;
+    height: 105px;
+    background-color: #141922;
+    transition: 0.3s;
+    overflow: hidden;
+    padding: 25px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.box-dashboard{
+    position: relative;
+    width: 200px;
+    height: 105px;
+    background-color: #141922;
+    transition: 0.3s;
+    overflow: hidden;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+
+.box-content{
+    position: relative;
+    width: 300px;
+    height: 420px;
+    transition: 0.3s;
+    flex-wrap: wrap;
+    overflow: visible;
+    padding: 15px;
+}
+
+
+.box-content .text-content{
+    background-color: transparent;
+    color: #fff;
+    font-size: 40px;
+}
+
+
+.text-content{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: #141922;
+    width: 295px;
+    height: 415px;
+    z-index: 10;
+    color: #fff;
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.form-content{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: #141922;
+    width: 295px;
+    height: 415px;
+    z-index: 10;
+    color: #fff;
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+
+.form-content input{
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: #141922;
+    padding: 13px;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.text-content a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    line-height: 43px;
+    border: 2px solid #fff;
+}
+
+.form-content a, button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    line-height: 43px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    cursor: pointer;
+}

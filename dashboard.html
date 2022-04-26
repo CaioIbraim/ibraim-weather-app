@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Barbershare</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <section class="container">    
+        <div class="wrap">
+            <div class="box">
+                <h2 id="temperature">Temperatura</h2>
+                <p id="description">Descrição do tempo</p>
+            </div>    
+            <div class="box">
+                <h2 id="locationZone">Rio de Janeiro</h2>
+                <img id="icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="" srcset="">
+            </div>
+        </div>
+    </section>
+</body>
+
+<script>
+    
+    
+    
+    var locationZone = document.getElementById("locationZone")
+    var temperature  = document.getElementById("temperature")
+    var description  = document.getElementById("description")
+    var icon = document.getElementById("icon")
+   
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition((position) => {
+            
+        let key = 'b0ebcf27e42dcd6be5e2e5e08ca7c369'
+        let lat = position.coords.latitude
+        let lon = position.coords.longitude
+
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`)
+            .then(response => response.json())
+            .then((data) => {
+                console.log(data)
+                locationZone.innerHTML = data.name
+                temperature.innerHTML  = data.main.temp
+                description.innerHTML  = data.weather[0].description
+                icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+            })
+            .catch(err => console.error(err));
+        })
+    }
+    
+
+    
+</script>
+
+</html>
